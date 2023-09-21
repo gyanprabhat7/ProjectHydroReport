@@ -112,3 +112,32 @@ problemForm.addEventListener('submit', function (e) {
 });
 
 
+/* Other's submissions */
+// Reference to the Firebase Realtime Database
+const database = firebase.database();
+
+// Function to fetch and display submissions
+function displaySubmissions() {
+    const submissionList = document.getElementById('submission-list');
+
+    // Reference to the 'problems' node in the database
+    const problemsRef = database.ref('problems');
+
+    // Listen for child_added event to fetch new submissions
+    problemsRef.on('child_added', (snapshot) => {
+        const problem = snapshot.val();
+        const submissionItem = document.createElement('div');
+        submissionItem.classList.add('submission-item');
+        submissionItem.innerHTML = `
+            <h3>Problem Type: ${problem.problemType}</h3>
+            <p>Description: ${problem.description}</p>
+            <!-- Add more details here as needed -->
+        `;
+        submissionList.appendChild(submissionItem);
+    });
+}
+
+// Call the function to display submissions when the page loads
+displaySubmissions();
+
+

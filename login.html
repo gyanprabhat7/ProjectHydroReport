@@ -4,13 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login - HydroReport</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
-    <script src="bower_components/firebaseui/dist/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="bower_components/firebaseui/dist/firebaseui.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            color: #007BFF;
+            font-size: 28px;
+        }
+
+        .login {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .login label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .login input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-bottom: 2px solid #007BFF;
+            border-radius: 0;
+            outline: none;
+            font-size: 18px;
+            background: transparent;
+            transition: border-color 0.3s;
+        }
+
+        .login input:focus {
+            border-color: #0056b3;
+        }
+
+        .login button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login button:hover {
+            background-color: #0056b3;
+        }
+
+        .background-ripple {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 10%, rgba(0, 123, 255, 0.5) 50%);
+            background-size: 150% 150%;
+            animation: ripple 2s infinite;
+            z-index: -1;
+        }
+
+        @keyframes ripple {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+    </style>
 </head>
-<body>
+<body style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeC95-K3IrCvxv97FcChqXwFPTfvSE6ZEnew&usqp=CAU'); background-size: 100% 100%;">
+    <div class="container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="login">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="login">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="login">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="background-ripple"></div>
+    </div>
     
     <!-- Include Firebase JavaScript SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>

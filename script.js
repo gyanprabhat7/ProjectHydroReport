@@ -1,8 +1,13 @@
 /* Firebase configuration */
 
+import { initializeApp } from 'firebase/app';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+
 const firebaseConfig = {
     apiKey: "AIzaSyD4S8p3luYZavoni3WlL-CPT3Vktdtsx3E",
     authDomain: "projecthydroreport.firebaseapp.com",
+    databaseURL: "https://projecthydroreport-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "projecthydroreport",
     storageBucket: "projecthydroreport.appspot.com",
     messagingSenderId: "45585808372",
@@ -10,53 +15,16 @@ const firebaseConfig = {
     measurementId: "G-PLCBLY233Z"
   };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
+  
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
-/* Firebase User Authentication */
-
-// Initialize Firebase Authentication
-const auth = firebase.auth();
-
-// User Registration
-function registerUser(email, password) {
-    auth.createUserWithEmailAndPassword(email, password)
-        .then((user) => {
-            // User registered successfully
-            console.log('User registered:', user);
-        })
-        .catch((error) => {
-            // Handle registration error
-            console.error('Registration error:', error);
-        });
-}
-
-// User Login
-const loginButton = document.getElementById('login-button');
-const userName = document.getElementById('user-name');
-
-loginButton.addEventListener('click', () => {
-    const user = auth.currentUser;
-    
-    if (user) {
-        userName.textContent = user.displayName || 'Guest';
-    } else {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithPopup(provider)
-            .then((result) => {
-                const user = result.user;
-                userName.textContent = user.displayName || 'Guest';
-            })
-            .catch((error) => {
-                console.error('Login error:', error);
-            });
-    }
-});
 
 /* Firebase Realtime Database */
 
 // Initialize Firebase Realtime Database
-const database = firebase.database();
+const problemsdb = firebase.database();
 
 // Save problem data
 function saveProblem(userId, latitude, longitude, description, problemType) {
@@ -90,8 +58,8 @@ problemForm.addEventListener('submit', function (e) {
     const description = document.getElementById('description').value;
     const problemType = document.getElementById('problem-type').value;
     const userId = firebase.auth().currentUser.uid;
-    const latitude = /* Get latitude from map click event */;
-    const longitude = /* Get longitude from map click event */;
+    const latitude = 1000.2222;
+    const longitude = 1000.2222;
     const imageFile = document.getElementById('image').files[0];
 
     const storageRef = firebase.storage().ref('images/' + userId + '/' + imageFile.name);

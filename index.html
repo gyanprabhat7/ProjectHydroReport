@@ -21,31 +21,12 @@
     <main>
         <!-- Map -->
         <div id="map"></div>
-        <h2>Mapblock <section></section></h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14750.332656334496!2d73.35906865!3d22.44470965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695362823792!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <!-- other people's submissions -->
     <div id="submission-list">
         <h2>Recent Submissions</h2>
     </div>
-
-        <!-- problem reporting form -->
-        <div id="report-form">
-            <h2>Report a Water Problem</h2>
-            <form id="problem-form">
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea>
-                <label for="problem-type">Problem Type:</label>
-                <select id="problem-type" name="problem-type" required>
-                    <option value="flooding">Flooding</option>
-                    <option value="water-quality">Water Quality</option>
-                    <option value="drainage">Drainage</option>
-                </select>
-                <!-- input field for image upload -->
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image" accept="image/*" required><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <a href="sub.html"><input type="button" value="Report an issue"></button></a>
     </main>
     
     <!--  Mapbox JavaScript -->

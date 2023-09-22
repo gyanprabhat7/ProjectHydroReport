@@ -19,17 +19,16 @@
         
     </header>
     <main>
-        <!-- Map container -->
+        <!-- Map -->
         <div id="map"></div>
-        <h2>Mapb <section></section></h2>
+        <h2>Mapblock <section></section></h2>
 
-        <!-- Display other people's submissions -->
+        <!-- other people's submissions -->
     <div id="submission-list">
         <h2>Recent Submissions</h2>
-        <!-- Submissions will be displayed here dynamically using JavaScript -->
     </div>
 
-        <!-- Add form for problem reporting -->
+        <!-- problem reporting form -->
         <div id="report-form">
             <h2>Report a Water Problem</h2>
             <form id="problem-form">
@@ -41,7 +40,7 @@
                     <option value="water-quality">Water Quality</option>
                     <option value="drainage">Drainage</option>
                 </select>
-                <!-- Add an input field for uploading images -->
+                <!-- input field for image upload -->
                 <label for="image">Image:</label>
                 <input type="file" id="image" name="image" accept="image/*" required>
                 <button type="submit">Submit</button>
@@ -49,13 +48,13 @@
         </div>
     </main>
     
-    <!-- Include Mapbox JavaScript -->
+    <!--  Mapbox JavaScript -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-    <!-- Include Firebase JavaScript SDK -->
+    <!-- Firebase JavaScript SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
-    <!-- Include your JavaScript file (script.js) -->
+    <!--(script.js) -->
     <script src="script.js"></script>
 </body>
 </html>

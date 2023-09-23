@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 08:26 AM
+-- Generation Time: Sep 23, 2023 at 11:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dh`
+-- Database: `dhydro`
 --
 
 -- --------------------------------------------------------
@@ -28,19 +28,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `image` (
-  `id` int(250) NOT NULL,
-  `filename` varchar(250) NOT NULL
+  `id` int(255) NOT NULL,
+  `filename` varchar(255) NOT NULL,
+  `descryption` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `image`
 --
 
-INSERT INTO `image` (`id`, `filename`) VALUES
-(13, 'w4.jpeg'),
-(9, 'w1.jpeg'),
-(10, 'w2.jpeg'),
-(12, 'w3.jpeg');
+INSERT INTO `image` (`id`, `filename`, `descryption`) VALUES
+(14, 'w4.jpeg', NULL),
+(15, 'w3.jpeg', 'There is a flood in our area'),
+(16, 'w4.jpeg', 'fdsg');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +60,7 @@ ALTER TABLE `image`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

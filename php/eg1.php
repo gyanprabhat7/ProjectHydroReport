@@ -29,7 +29,7 @@ $msg = "";
 
      <main>
       <!-- Map -->
-      <div class="map" id="map"></div>
+      <div class="map" id="map" width="100%"></div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14750.332656334496!2d73.35906865!3d22.44470965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695362823792!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <!-- other people's submissions -->
   <div class="submission-list" id="submission-list">

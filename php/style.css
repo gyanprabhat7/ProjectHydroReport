@@ -40,7 +40,6 @@ header {
 }
 
 .reportbutton{
-    position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -87,7 +86,6 @@ header {
     bottom: -4px;
     content: "";
     left: 0;
-    position: absolute;
     right: 0;
     top: 0;
     z-index: -1;
@@ -109,7 +107,6 @@ header {
 
 
   .submission-list{
-    position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);

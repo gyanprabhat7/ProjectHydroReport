@@ -41,18 +41,20 @@ $msg = "";
 // If upload button is clicked ...
 if (isset($_POST["upload"])) {
 
+    $cryption = $_POST["description"];
     $filename = $_FILES["image"]["name"];
     $tempname = $_FILES["image"]["tmp_name"];
     $folder = "./image/" . $filename;
 
-    $db = mysqli_connect("localhost", "root", "", "dh");
+    $db = mysqli_connect("localhost", "root", "", "dhydro");
 
     if (!$db) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
     // Get all the submitted data from the form
-    $sql = "INSERT INTO image (filename) VALUES ('$filename')";
+    $sql = "INSERT INTO image (filename,descryption) VALUES ('$filename','$cryption')";
+
 
     // Execute query
     if (mysqli_query($db, $sql)) {

@@ -5,7 +5,7 @@ $msg = "";
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
 	$folder = "./image/" . $filename;
 
-	$db = mysqli_connect("localhost", "root", "", "dh");
+	$db = mysqli_connect("localhost", "root", "", "dhydro");
 
 ?>
 <!doctype html>
@@ -37,17 +37,27 @@ $msg = "";
       <h2>Local Updates</h2>
     </div> 
     <div id="display-image">
-		<marquee><?php
+		<marquee>
+            <table>
+                <tr><?php
 		$query = " select * from image ";
 		$result = mysqli_query($db, $query);
-
 		while ($data = mysqli_fetch_assoc($result)) {
 		?>
+        <td>
+            <table>
+                <tr><td>
 			<img src="./image/<?php echo $data['filename']; ?>">
+        </td></tr>
+        <tr><td>
+            <?php echo $data['descryption']; ?>
+        </td></tr>
+        </table>
+        </td>
 
 		<?php
 		}
-		?></marquee>
+		?></tr></table></marquee>
 	</div>
       
   </div>

@@ -16,6 +16,25 @@ $msg = "";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+.my-button {
+    background-color: #618264;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.my-button:hover {
+    background-color: #4d6752; /* Change color on hover if desired */
+}
+</style>
   </head>
   <body>
 
@@ -61,9 +80,7 @@ $msg = "";
 	</div>
       
   </div>
-  <div class="reportbutton">
-    <a href="sub1.php"><button class="button-19" role="button">Report an issue</button></button></a>
-  </div>
+  <a href="sub1.php"><button class="my-button" role="button">Report an issue</button></a>
   
   </main>
 

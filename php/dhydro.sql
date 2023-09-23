@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 11:15 AM
+-- Generation Time: Sep 23, 2023 at 12:17 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,9 +38,8 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id`, `filename`, `descryption`) VALUES
-(14, 'w4.jpeg', NULL),
 (15, 'w3.jpeg', 'There is a flood in our area'),
-(16, 'w4.jpeg', 'fdsg');
+(17, 'w2.jpeg', 'Due to heavy rain flood in our area  ');
 
 --
 -- Indexes for dumped tables
@@ -60,7 +59,7 @@ ALTER TABLE `image`
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

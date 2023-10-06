@@ -15,7 +15,7 @@
 
 **Team Lead:** Tanvi Patel
 
-- Gyan Prabhat (M), gyan@epiction.nl , 6353452297, 1st year Diploma CSE
+- Gyan Prabhat Sharma (M), info.gyanprabhat@pm.me , 6353452297, 1st year Diploma CSE
 - Samay Balar (M), samaybalar159@gmail.com , 9054640528, 2nd Year B.Tech IT
 - Jay Patel (M), jay127384@gmail.com , 7229056491 , 2nd year B.Tech IT
 -  Tanvi Patel (F), tanvipateloo26@gmail.com , 9601557210 , 2nd year B.Tech IT
